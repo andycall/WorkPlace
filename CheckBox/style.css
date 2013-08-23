@@ -1,0 +1,50 @@
+* {
+    transition: all .4s ease;
+}
+body {
+    text-align: center;
+    margin-top: 3em;
+}
+#checker {
+    position: relative;
+    display: inline-block;
+}
+#check {
+    -webkit-appearance: none;
+    border-radius: 50px;
+    display: inline-block;
+    background: #51bd9f;
+    width: 70px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+}
+#check:checked {
+    background: #ea6468;
+}
+#check:after {
+    content: 'ON';
+    color: #fff;
+    font-size: 14px;
+    position: absolute;
+    top: 6px;
+    left:  10px
+}
+#check:checked:after {
+    content: 'OFF';
+    left: inherit;
+    right: 10px;
+}
+#checker label {
+    cursor: pointer;
+    position: absolute;
+    right: 6px;
+    top: 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #fff;
+}
+#check:checked + label {
+    right: 45px;
+}

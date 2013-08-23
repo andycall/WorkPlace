@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div id="container">
+    <div>jakwqijoiqjqdjwjoidjwqdoi qdqwoidjwqodjsqkdjwqd</div>
+    <div>jakwqijoiqjqdjwjoidjwqdoi qdqwoidjwqodjsqkdjwqd</div>
+    <div>jakwqijoiqjqdjwjoidjwqdoi qdqwoidjwqodjsqkdjwqd</div>
+    <div>jakwqijoiqjqdjwjoidjwqdoi qdqwoidjwqodjsqkdjwqd</div>
+    <div>jakwqijoiqjqdjwjoidjwqdoi qdqwoidjwqodjsqkdjwqd</div>
+    <div>jakwqijoiqjqdjwjoidjwqdoi qdqwoidjwqodjsqkdjwqd</div>
+    <div>jakwqijoiqjqdjwjoidjwqdoi qdqwoidjwqodjsqkdjwqd</div>
+    <div>jakwqijoiqjqdjwjoidjwqdoi qdqwoidjwqodjsqkdjwqd</div>
+    <div>jakwqijoiqjqdjwjoidjwqdoi qdqwoidjwqodjsqkdjwqd</div>
+    <div>jakwqijoiqjqdjwjoidjwqdoi qdqwoidjwqodjsqkdjwqd</div>
+    <div>jakwqijoiqjqdjwjoidjwqdoi qdqwoidjwqodjsqkdjwqd</div>
+    <div>jakwqijoiqjqdjwjoidjwqdoi qdqwoidjwqodjsqkdjwqd</div>
+    <div>jakwqijoiqjqdjwjoidjwqdoi qdqwoidjwqodjsqkdjwqd</div>
+    <div>jakwqijoiqjqdjwjoidjwqdoi qdqwoidjwqodjsqkdjwqd</div>
+    <div>jakwqijoiqjqdjwjoidjwqdoi qdqwoidjwqodjsqkdjwqd</div>
+    <div>jakwqijoiqjqdjwjoidjwqdoi qdqwoidjwqodjsqkdjwqd</div>
+    <div>jakwqijoiqjqdjwjoidjwqdoi qdqwoidjwqodjsqkdjwqd</div>
+    <div>jakwqijoiqjqdjwjoidjwqdoi qdqwoidjwqodjsqkdjwqd</div>
+    <div>jakwqijoiqjqdjwjoidjwqdoi qdqwoidjwqodjsqkdjwqd</div>
+    <div>jakwqijoiqjqdjwjoidjwqdoi qdqwoidjwqodjsqkdjwqd</div>
+</div>
+
+<div style="width:200px;height:200px;background-color:#999999;overflow:auto;" id="外层元素A">
+    <div style="width:100px;height:300px;background-color:#FFFF00;" id="内层元素A">
+        这些文字显示在内层元素中。
+    </div>
+</div>
+<p>scrollTop值是：<span id="外层元素A的scrollTop的值"></span></p>
+<p><button type="button" onclick="div_外层元素A.scrollTop=50;">把scrollTop设为50</button>
+    <button type="button" onclick="div_外层元素A.scrollTop=500;">把scrollTop设为500</button>
+</p>
+<p>输入scrollTop的值:<input type="text" id="输入scrollTop的值" value="" />
+    <button type="button" onclick="设置scrollTop的值()" name="设置scrollTop的值">确定</button>
+</p>
+</body>
+<script type="text/javascript">
+    var div_外层元素A = document.getElementById("外层元素A");
+    var div_inner = document.getElementById('内层元素A');
+    div_外层元素A.addEventListener('scroll',读取scrollTop的值并显示出来,false);
+    //注册onscroll事件处理函数。当拖动滚动条时，会产生onscroll事件
+    var span_外层元素A的scrollTop的值 = document.getElementById("外层元素A的scrollTop的值");
+    //onscroll事件的处理函数
+    function 读取scrollTop的值并显示出来()
+    {
+        span_外层元素A的scrollTop的值.innerHTML=div_外层元素A.scrollTop;
+        if(div_inner.offsetHeight - div_外层元素A.offsetHeight - div_外层元素A.scrollTop < 30 ){
+            alert('Ajax!');
+        }
+//读取"外层元素"此时的scrollTop的值并显示出来
+    }
+    读取scrollTop的值并显示出来();
+    //页面加载完成后，执行一次此函数。显示最初的scrollTop值，此时的值为0
+    div_外层元素A.scrollTop = 10;
+    //通过js语句来设置scrollTop的值,本条语句会触发onscroll事件，使得"读取scrollTop的值并显示出来"函数执行一次。
+    function 设置scrollTop的值()
+    {
+        if("" != document.getElementById("输入scrollTop的值").value)
+        div_外层元素A.scrollTop = document.getElementById("输入scrollTop的值").value;
+        else alert("请输入一个数值");
+    }</script>
+
+</html>

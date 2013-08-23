@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+    </style>
+</head>
+<body>
+<h1>Pure CSS spinner</h1>
+
+<div class="spinner"></div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div id="checker">
+    <input id="check" type="checkbox" />
+    <label for="check"></label>
+</div>
+</body>
+</html>
